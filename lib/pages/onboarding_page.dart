@@ -44,7 +44,7 @@ class onBoardingPage extends StatelessWidget {
       finishButtonStyle: FinishButtonStyle(
           backgroundColor: PrimaryColor,
           shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.all(Radius.circular(20)))),
+              borderRadius: BorderRadius.all(Radius.circular(5)))),
       background: [
         Image.asset(
           'assets/img/onboarding1.png',
@@ -161,6 +161,7 @@ class IntroPage extends StatelessWidget {
             Column(
               children: [
                 InkWell(
+                  onTap: () => context.goNamed("login"),
                   child: Container(
                     height: 50,
                     width: MediaQuery.of(context).size.width - 50,
@@ -175,11 +176,12 @@ class IntroPage extends StatelessWidget {
                     ),
                     decoration: BoxDecoration(
                         border: Border.all(color: PrimaryColor, width: 3),
-                        borderRadius: BorderRadius.circular(30)),
+                        borderRadius: BorderRadius.circular(5)),
                   ),
                 ),
                 SizedBox(height: 24),
                 InkWell(
+                  onTap: () => context.goNamed("register"),
                   child: Container(
                     height: 50,
                     width: MediaQuery.of(context).size.width - 50,
@@ -194,7 +196,7 @@ class IntroPage extends StatelessWidget {
                     ),
                     decoration: BoxDecoration(
                         color: PrimaryColor,
-                        borderRadius: BorderRadius.circular(30)),
+                        borderRadius: BorderRadius.circular(5)),
                   ),
                 ),
                 SizedBox(height: 15),

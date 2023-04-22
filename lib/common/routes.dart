@@ -1,3 +1,4 @@
+import 'package:bloodconnect/pages/onboarding_page.dart';
 import 'package:bloodconnect/pages/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -19,7 +20,7 @@ final GoRouter routes = GoRouter(
       },
     ),
   ],
-  initialLocation: "/splashscreen",
+  initialLocation: "/onboarding",
   debugLogDiagnostics: true,
   routerNeglect: true,
 );

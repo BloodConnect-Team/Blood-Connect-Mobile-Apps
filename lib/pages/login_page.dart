@@ -1,7 +1,6 @@
 import 'package:bloodconnect/const/color.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:go_router/go_router.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
@@ -9,6 +8,7 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: Container(
         padding: EdgeInsets.all(20),
         child: Column(
@@ -75,6 +75,7 @@ class LoginPage extends StatelessWidget {
                   ),
                   SizedBox(height: 20),
                   InkWell(
+                    onTap: () => context.goNamed("home"),
                     child: Container(
                       height: 50,
                       width: MediaQuery.of(context).size.width - 50,

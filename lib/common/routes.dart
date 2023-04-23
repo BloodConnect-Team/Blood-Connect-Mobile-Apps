@@ -1,3 +1,5 @@
+import 'package:bloodconnect/pages/bottom_navigation_bar.dart';
+import 'package:bloodconnect/pages/home_page.dart';
 import 'package:bloodconnect/pages/login_page.dart';
 import 'package:bloodconnect/pages/onboarding_page.dart';
 import 'package:bloodconnect/pages/register_page.dart';
@@ -36,8 +38,15 @@ final GoRouter routes = GoRouter(
             },
           ),
         ]),
+    GoRoute(
+      path: '/home',
+      name: 'home',
+      builder: (BuildContext context, GoRouterState state) {
+        return BottomNav();
+      },
+    ),
   ],
-  initialLocation: "/;",
+  initialLocation: "/",
   debugLogDiagnostics: true,
   routerNeglect: true,
 );
